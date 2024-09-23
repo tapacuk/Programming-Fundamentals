@@ -1,96 +1,52 @@
 /**
- * Done by:ncvkmlcnkjvkjcvnkjlcnkjljlncjnkjlvknjlvkjlvn
- * Student Name: Severyn Kotyhoroshko
- * Student Group: 123
+ * Done by: Taras Datsenko
+ * Student Name: Taras Datsenko
+ * Student Group: 121
  * Lab 1.4
+ * Variant: 5
  */
-
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    // Comment to local scope 1
-    {
-        int num = 10;
-        int* ptr = &num; // ptr now holds the address of num
+	unsigned short valA;
+	int valB;
+	float valC;
+	double valD;
 
-        cout << "Value of num: " << num << endl;        // Outputs: 10
-        cout << "Address of num: " << ptr << endl;      // Outputs the memory address of num
-        cout << "Value at the address stored in ptr: " << *ptr << endl; // Outputs: 10
+	unsigned short* pvalA;
+	int *pvalB;
+	float *pvalC;
+	double *pvalD;
 
-        num++;
-        cout << num << endl;
+	void *pvdValA;
+	
+	//
 
-        // delete ptr;         // Deallocates the memory
-        ptr = nullptr;         // Good practice to avoid dangling ptrs
-        cout << "Nullified ptr: " << ptr << endl;
-    }
+	pvalA = &valA;
+	pvalB = &valB;
+	pvalC = &valC;
+	pvalD = &valD;
 
-    // Comment to local scope 2
-    {
-        cout << "Pointer Arithmetic" << endl;
-        int arr[] = {1, 2, 3, 4, 5};
+	*pvalA = 1400;
+	*pvalB = -386;
+	*pvalC = 4.4525;
+	*pvalD = -7.3e23;
 
-        cout << "sizeof arr = " << sizeof(arr) << endl;
-        int* ptr = arr;         // Points to the first element of the array
+	//
 
-        const int firstEl = arr[0];
+	int sizeValA = sizeof(valA);
+	int sizeValB = sizeof(valB);
+	int sizeValC = sizeof(valC);
+	int sizeValD = sizeof(valD);
 
-        cout << arr[0] << endl;   // Outputs: 1
-        cout << ptr << endl;   // Outputs: Address
-        cout << *ptr << endl;   // Outputs: 1
-        ptr++;                  // Moves to the next element
-        cout << *ptr << endl;   // Outputs: 2
+	int sizepValA = sizeof(pvalA);
+	int sizepValB = sizeof(pvalB);
+	int sizepValC = sizeof(pvalC);
+	int sizepValD = sizeof(pvalD);
+	
+	int sizepVoidValA = sizeof(pvdValA);
 
-        ptr = nullptr;         // Good practice to avoid dangling ptrs
-        cout << "sizeof arr = " << sizeof(arr) << endl;
-    }
+	//
 
-    // Comment to local scope 3
-    {
-        cout << "Dynamic Memory Allocation for INT" << endl;
-        int* ptr = new int;    // Allocates memory for a single integer
-        *ptr = 20;             // Sets the value of the allocated memory
-
-        cout << *ptr << endl;  // Outputs: 20
-
-        delete ptr;            // Deallocates the memory
-        ptr = nullptr;         // Good practice to avoid dangling ptrs
-    }
-
-
-    // Comment to local scope 4
-    {
-        cout << "Dynamic Memory Allocation for ARR" << endl;
-        int* arr = new int[5]; // Allocates memory for an array of 5 integers
-
-        cout << "sizeof *arr = " << sizeof(*arr) << endl;
-        cout << "sizeof arr = " << sizeof(arr) << endl;
-
-        cout << arr << endl;
-        for(int i = 0; i < 5; i++) {
-            arr[i] = i + 1;    // Initializes array
-        }
-
-        delete[] arr;          // Deallocates the array memory
-        arr = nullptr;
-        cout << arr << endl;
-        cout << "sizeof *arr = " << sizeof(*arr) << endl;
-        cout << "sizeof arr = " << sizeof(arr) << endl;
-    }
-
-    // Comment to local scope 5
-    {
-        cout << "Pointers to Pointers" << endl;
-        int num = 10;
-        int* ptr = &num;
-        int** ptrToPtr = &ptr;
-
-        cout << **ptrToPtr << endl; // Outputs: 10
-        ptr = nullptr;
-        ptrToPtr = nullptr;
-    }
-
-    return 0;
+	pvdValA = &pvalA;
 }
