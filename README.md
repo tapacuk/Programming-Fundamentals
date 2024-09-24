@@ -4,7 +4,7 @@
 - 1.4 = **done ✔**
 - 1.5 = **done ✔**
 - 1.6 = not done
-- 1.7 = not done
+- 1.7 = **done ✔**
 - 1.8 = **done ✔**
 
 **PRACTICALS**
