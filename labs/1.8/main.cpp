@@ -2,8 +2,7 @@
  * Done by: Taras Datsenko
  * Student Name: Taras Datsenko
  * Student Group: 121
- * Lab 1.
- * Variant: 5
+ * Lab 1.8
  */
 #include <iostream>
 
