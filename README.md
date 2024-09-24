@@ -15,7 +15,7 @@ This repository is a showcase of my programming skills and knowledge gained thro
 * **Practicals**: Real-world projects that demonstrate my understanding of programming principles and my ability to apply them to solve problems 💡.
 
 
-**PROGRESS**
+**Progress 🥇**
 -------------------
 **LABS:**
 - 1.4 = **done ✔**
