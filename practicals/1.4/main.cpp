@@ -6,71 +6,68 @@
  */
 
 #include <iostream>
-#include <cmath>  // РґР»СЏ 5 Р·Р°РІРґР°РЅРЅСЏ
+#include <cmath>  // для 5 завдання
 
-
+// ЗАВДАННЯ 1
 int main() {
-	// Р—РђР’Р”РђРќРќРЇ 1
-	{
-		int sum = 0;
-	
-		for (int i = 1; i <= 5; i++) {
-			sum += i;
-		}
-		std::cout << "Р РµР·СѓР»СЊС‚Р°С‚:" << sum << std::endl;
+	int sum = 0;
+
+	for (int i = 1; i <= 5; i++) {
+		sum += i;
 	}
-	
-	// Р—РђР’Р”РђРќРќРЇ 2
-	{
-		int n;
-		long factorial = 1;
-	
-		if (n < 0){
-			return 0; // РћСЃРєС–Р»СЊРєРё РІС–РґвЂ™С”РјРЅРѕРіРѕ С„Р°РєС‚РѕСЂС–Р°Р»Сѓ РЅРµ С–СЃРЅСѓС”
-		}
-		else {
-			for (int i = 1; i <= n; i++) {
-				factorial *= i;
-				std::cout << "Р¤Р°РєС‚РѕСЂС–Р°Р» n РґРѕСЂС–РІРЅСЋС”" << factorial << std::endl;
-			}
+	std::cout << "Результат:" << sum << std::endl;
+}
+
+// ЗАВДАННЯ 2
+int main() {
+	int n;
+	long factorial = 1;
+
+	if (n < 0){
+		return 0; // Оскільки від’ємного факторіалу не існує
+	}
+	else {
+		for (int i = 1; i <= n; i++) {
+			factorial *= i;
+			std::cout << "Факторіал n дорівнює" << factorial << std::endl;
 		}
 	}
-	
-	// Р—РђР’Р”РђРќРќРЇ 3
-	{
-		int n;
-		int sum = 0;
-	
-		for (int i = 0; i <= n; i += 2) {
-			sum += i;
-		}
-	
-		std::cout << "Р РµР·СѓР»СЊС‚Р°С‚ =" << sum << std::endl;
+}
+
+// ЗАВДАННЯ 3
+int main() {
+	int n;
+	int sum = 0;
+
+	for (int i = 0; i <= n; i += 2) {
+		sum += i;
 	}
-	
-	// Р—РђР’Р”РђРќРќРЇ 4
-	{
-		int n;
-		int mul;
-		long prev = 1;
-		int d; // СЂС–Р·РЅРёС†СЏ
-		int a1 // РїРµСЂС€РёР№ С‡Р»РµРЅ РїСЂРѕРіСЂРµСЃС–С—
-	
-		for (int i = 0; i < n; i++) {
-	        mul = a1 + i * d; 
-			prev *= mul;
-	    }
-	
-		std::cout << "Р”РѕР±СѓС‚РѕРє РїРµСЂС€РёС… РµР»РµРјРµРЅС‚С–РІ РїСЂРѕРіСЂРµСЃС–С— = " << prev << std::endl;
-	}
-	
-	// Р—РђР’Р”РђРќРќРЇ 5
-	{
-		double x;
-		double k = 0.01; // РєСЂРѕРє
-		double pi = M_PI
-	
-		for (x = 0; x <= pi; x += k) {
-		}
+
+	std::cout << "Результат =" << sum << std::endl;
+}
+
+// ЗАВДАННЯ 4
+int main() {
+	int n;
+	int mul;
+	long prev = 1;
+	int d; // різниця
+	int a1 // перший член прогресії
+
+	for (int i = 0; i < n; i++) {
+        mul = a1 + i * d; 
+		prev *= mul;
+    }
+
+	std::cout << "Добуток перших елементів прогресії = " << prev << std::endl;
+}
+
+// ЗАВДАННЯ 5
+int main() {
+	double x;
+	double k = 0.01; // крок
+	double pi = M_PI
+
+	for (x = 0; x <= pi; x += k) {
 	}
 }
