@@ -8,8 +8,9 @@
 #include <iostream>
 #include <cmath>  // для 5 завдання
 
-// ЗАВДАННЯ 1
+
 int main() {
+	// ЗАВДАННЯ 1
 	{
 		int sum = 0;
 	
