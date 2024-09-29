@@ -29,7 +29,7 @@ int main(){
 int countBits(int n) {
     int count = 0; // Зберігає кількість одиничних бітів 
 
-    for (; n > 0; n >>= 1) { 
+    for (int n = 0; n > 0; n >>= 1) { 
         count += n & 1; // Перевірка останнього біта
     }
 
