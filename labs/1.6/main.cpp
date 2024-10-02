@@ -10,7 +10,7 @@
 int main()
 {
 	setlocale(LC_ALL, "Ukrainian");
-	// ЗАВДАННЯ 1
+	// Р—РђР’Р”РђРќРќРЇ 1
 	{
 		char ca;
 		ca = '=';
@@ -22,12 +22,12 @@ int main()
 		int ib = 0x10;
 		const int IC = 0x72;
 
-		std::cout << "значення char: " << ca << ", " << cb << ", " << CC << std::endl;
-		std::cout << "значення int: " << ia << ", " << ib << ", " << IC << std::endl;
+		std::cout << "Р·РЅР°С‡РµРЅРЅСЏ char: " << ca << ", " << cb << ", " << CC << std::endl;
+		std::cout << "Р·РЅР°С‡РµРЅРЅСЏ int: " << ia << ", " << ib << ", " << IC << std::endl;
 		std::cout << std::endl;
 
 	}
-	// ЗАВДАННЯ 2 
+	// Р—РђР’Р”РђРќРќРЇ 2 
 	{
 		int a;
 		float f;
@@ -37,33 +37,33 @@ int main()
 		f = 2.57e-4;
 		us = 2384;
 
-		std::cout << "початкові значення: " << a << f << us << std::endl;
+		std::cout << "РїРѕС‡Р°С‚РєРѕРІС– Р·РЅР°С‡РµРЅРЅСЏ: " << a << f << us << std::endl;
 
 		double exd;
 		int exi;
 		char exc;
 
-		// явне приведення
+		// СЏРІРЅРµ РїСЂРёРІРµРґРµРЅРЅСЏ
 		exd = (double)a;
 		exi = (int)f;
 		exc = (char)us;
 
-		std::cout << "значення після явного приведення" << std::endl;
+		std::cout << "Р·РЅР°С‡РµРЅРЅСЏ РїС–СЃР»СЏ СЏРІРЅРѕРіРѕ РїСЂРёРІРµРґРµРЅРЅСЏ" << std::endl;
 		std::cout << "double: " << exd << std::endl;
 		std::cout << "int: " << exi << std::endl;
 		std::cout << "char: " << exc << std::endl << std::endl;
 
-		// неявне переведення
+		// РЅРµСЏРІРЅРµ РїРµСЂРµРІРµРґРµРЅРЅСЏ
 		double unexd = a;
 		int unexi = f;
 		char unexc = us;
 
-		std::cout << "значення після неявного приведення" << std::endl;
+		std::cout << "Р·РЅР°С‡РµРЅРЅСЏ РїС–СЃР»СЏ РЅРµСЏРІРЅРѕРіРѕ РїСЂРёРІРµРґРµРЅРЅСЏ" << std::endl;
 		std::cout << "double: " << unexd << std::endl;
 		std::cout << "int: " << unexi << std::endl;
 		std::cout << "char: " << unexc << std::endl << std::endl;
 
-		// обхід сурової типізації
+		// РѕР±С…С–Рґ СЃСѓСЂРѕРІРѕС— С‚РёРїС–Р·Р°С†С–С—
 		void* pVoid;
 
 		double* pointD;
@@ -81,13 +81,9 @@ int main()
 		pointC = (char*)pVoid;
 		us = *pointC;
 
-		std::cout << "обхід сурової типізації:" << std::endl;
+		std::cout << "РѕР±С…С–Рґ СЃСѓСЂРѕРІРѕС— С‚РёРїС–Р·Р°С†С–С—:" << std::endl;
 		std::cout << "double: " << exd << std::endl;
 		std::cout << "int: " << a << std::endl;
 		std::cout << "char: " << us << std::endl;
-
-
-
-
 	}
 }
