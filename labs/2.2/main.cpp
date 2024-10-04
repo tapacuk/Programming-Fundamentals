@@ -7,28 +7,30 @@
  */
 #include <iostream>
 
+enum Ctzshp = {e, u};
+
 struct Student {
-	char citizenship;
+	Ctzshp citizenship;
 	int course;
 	bool hostel;
 };
 
 int main() {
 	{
-		Student student;
+		Student mrstudent[8];
 
-		student[0] = { e, 2, true};
-		student[1] = { u, 1, false };
-		student[2] = { u, 3, true };
-		student[3] = { e, 2, true };
-		student[4] = { u, 4, false };
-		student[5] = { e, 1, true };
-		student[6] = { u, 3, false };
-		student[7] = { e, 5, false };
+		mrstudent[0] = { e, 2, true };
+		mrstudent[1] = { u, 1, false };
+		mrstudent[2] = { u, 3, true };
+		mrstudent[3] = { e, 2, true };
+		mrstudent[4] = { u, 4, false };
+		mrstudent[5] = { e, 1, true };
+		mrstudent[6] = { u, 3, false };
+		mrstudent[7] = { e, 5, false };
 
 		int count;
 		for (int i = 0; i < 7; i++) {
-			if (student[i].citizenship == e && student[i].hostel == true) {
+			if (mrstudent[i].citizenship == e && mrstudent[i].hostel == true) {
 				count++;
 			}
 		}
