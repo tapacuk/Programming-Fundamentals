@@ -2,7 +2,7 @@
 * Done by: Taras Datsenko
  * Student Name: Taras Datsenko
  * Student Group: 121
- * Prac. 1.6a
+ * Prac. 1.6
  */
 #include <iostream>
 using namespace std;
