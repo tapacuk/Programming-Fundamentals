@@ -3,7 +3,7 @@
  * Student Name: Taras Datsenko
  * Student Group: 121
  * Lab 2.2
- * Variant: 5
+ * Variant: 5 
  */
 #include <iostream>
 
