@@ -28,14 +28,13 @@ This repository is a showcase of my programming skills and knowledge gained thro
 - 2.3 = not done yet
 - 2.4 = not done yet
 - 2.5 = not done yet
+- 2.6 = not done yet
 
 
 **PRACTICALS**
 - 1.4 = **done ✔**
 - 1.5 = **done ✔**
 - 1.6 = **done ✔**
-- 2.1 = not done
-- 2.2 = not done
 
 **Technologies Used 💻**
 ---------------------
