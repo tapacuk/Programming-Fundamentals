@@ -1,6 +1,6 @@
 /**
  * Done by: Taras Datsenko
- * Student Name: Taras Datsenko
+ * Student Name: Taras Datsenko :3
  * Student Group: 121
  * Lab 2.1
  * Variant: 5
