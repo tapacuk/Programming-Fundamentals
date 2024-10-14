@@ -23,7 +23,7 @@ This repository is a showcase of my programming skills and knowledge gained thro
 - 1.6 = **done ✔**
 - 1.7 = **done ✔**
 - 1.8 = **done ✔**
-- 2.1 = not done yet
+- 2.1 = **done ✔**
 - 2.2 = **done ✔**
 - 2.3 = not done yet
 - 2.4 = not done yet
