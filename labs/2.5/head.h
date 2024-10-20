@@ -11,7 +11,7 @@ struct FirstList {
         // прохід до кінця ліста (працює поки не знайде останній елемент)
         while (processingElement->next != nullptr) {
             processingElement = processingElement->next;
-        }
+        };
 
         FirstList* temp = new FirstList;
         temp->data = element;
