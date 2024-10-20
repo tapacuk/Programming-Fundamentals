@@ -4,22 +4,22 @@ struct FirstList {
     double data = 0;
     FirstList* next = nullptr;
 
-    // äîäàâàííÿ íîâîãî åëåìåíòà â ë³ñò
+    // Ğ´Ğ¾Ğ´Ğ°Ğ²Ğ°Ğ½Ğ½Ñ Ğ½Ğ¾Ğ²Ğ¾Ğ³Ğ¾ ĞµĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ² Ğ»Ñ–ÑÑ‚
     void push(int element) {
         FirstList* processingElement = this;
         
-        // ïğîõ³ä äî ê³íöÿ ë³ñòà (ïğàöşº ïîêè íå çíàéäå îñòàíí³é åëåìåíò)
+        // Ğ¿Ñ€Ğ¾Ñ…Ñ–Ğ´ Ğ´Ğ¾ ĞºÑ–Ğ½Ñ†Ñ Ğ»Ñ–ÑÑ‚Ğ° (Ğ¿Ñ€Ğ°Ñ†ÑÑ” Ğ¿Ğ¾ĞºĞ¸ Ğ½Ğµ Ğ·Ğ½Ğ°Ğ¹Ğ´Ğµ Ğ¾ÑÑ‚Ğ°Ğ½Ğ½Ñ–Ğ¹ ĞµĞ»ĞµĞ¼ĞµĞ½Ñ‚)
         while (processingElement->next != nullptr) {
             processingElement = processingElement->next;
         }
 
         FirstList* temp = new FirstList;
         temp->data = element;
-        processingElement->next = temp;  // äîäàâàííÿ íîâîãî åëåìåíòó äî ë³ñòà
+        processingElement->next = temp;  // Ğ´Ğ¾Ğ´Ğ°Ğ²Ğ°Ğ½Ğ½Ñ Ğ½Ğ¾Ğ²Ğ¾Ğ³Ğ¾ ĞµĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñƒ Ğ´Ğ¾ Ğ»Ñ–ÑÑ‚Ğ°
     }
 }
 
-// ïåğåâ³ğêà ÷è íå º çíà÷åííÿ íóëåì
+// Ğ¿ĞµÑ€ĞµĞ²Ñ–Ñ€ĞºĞ° Ñ‡Ğ¸ Ğ½Ğµ Ñ” Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ½Ñ Ğ½ÑƒĞ»ĞµĞ¼
 inline bool isNonZero(FirstList* list) {
     return list->data != 0;
 }
