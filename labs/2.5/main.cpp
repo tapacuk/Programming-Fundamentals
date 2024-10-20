@@ -9,14 +9,14 @@
 #include "head.h"
 #include <stdlib.h>
 
- // структура аналогічна тієї що в файлі head.h
+ // СЃС‚СЂСѓРєС‚СѓСЂР° Р°РЅР°Р»РѕРіС–С‡РЅР° С‚С–С”С— С‰Рѕ РІ С„Р°Р№Р»С– head.h
 struct SecondList {
     double data = 0;
     SecondList* next = nullptr;
 
     void push(double element) {
         SecondList* temp = new SecondList;
-        temp->data = element;
+        temp->data = element;  
 
         SecondList* processingElement = this;
 
@@ -32,9 +32,9 @@ void initList(FirstList* list);
 void makeSecondList(FirstList* list, SecondList* newList);
 
 int main() {
-
+    
     FirstList* sampleList1 = new FirstList;
-    // позначення першого елементу та пуш елементів в кінець ліста
+    // РїРѕР·РЅР°С‡РµРЅРЅСЏ РїРµСЂС€РѕРіРѕ РµР»РµРјРµРЅС‚Сѓ С‚Р° РїСѓС€ РµР»РµРјРµРЅС‚С–РІ РІ РєС–РЅРµС†СЊ Р»С–СЃС‚Р°
     sampleList1->data = 1;
     sampleList1->push(7);
     sampleList1->push(-12);
@@ -42,7 +42,7 @@ int main() {
     sampleList1->push(98);
     sampleList1->push(22);
 
-    // заповнюємо другий ліст на основі першого
+    // Р·Р°РїРѕРІРЅСЋС”РјРѕ РґСЂСѓРіРёР№ Р»С–СЃС‚ РЅР° РѕСЃРЅРѕРІС– РїРµСЂС€РѕРіРѕ
     SecondList* sampleList2 = new SecondList;
     makeSecondList(sampleList1, sampleList2);
 
@@ -52,7 +52,7 @@ void initList(FirstList* list) {
     for (int i = 0; i < 7; i++) {
         int randInt = rand() % 200;
 
-        // присвоєння першому елементу рандомного значення без пушу 
+        // РїСЂРёСЃРІРѕС”РЅРЅСЏ РїРµСЂС€РѕРјСѓ РµР»РµРјРµРЅС‚Сѓ СЂР°РЅРґРѕРјРЅРѕРіРѕ Р·РЅР°С‡РµРЅРЅСЏ Р±РµР· РїСѓС€Сѓ 
         if (i == 0) {
             list->data = randInt;
             continue;
@@ -65,15 +65,15 @@ void initList(FirstList* list) {
 
 void makeSecondList(FirstList* list, SecondList* newList) {
     FirstList* processingElement = list;
-    bool isInited = false;  // перевірка на ініціалізацію першого елементу
+    bool isInited = false;  // РїРµСЂРµРІС–СЂРєР° РЅР° С–РЅС–С†С–Р°Р»С–Р·Р°С†С–СЋ РїРµСЂС€РѕРіРѕ РµР»РµРјРµРЅС‚Сѓ
 
     while (processingElement != nullptr) {
         if (isNonZero(processingElement) && processingElement->data < 0) {
-            // якщо це перший елемент нового ліста то присвоюємо значення першого елементу без пушу (так само як з першим лістом)
+            // СЏРєС‰Рѕ С†Рµ РїРµСЂС€РёР№ РµР»РµРјРµРЅС‚ РЅРѕРІРѕРіРѕ Р»С–СЃС‚Р° С‚Рѕ РїСЂРёСЃРІРѕСЋС”РјРѕ Р·РЅР°С‡РµРЅРЅСЏ РїРµСЂС€РѕРіРѕ РµР»РµРјРµРЅС‚Сѓ Р±РµР· РїСѓС€Сѓ (С‚Р°Рє СЃР°РјРѕ СЏРє Р· РїРµСЂС€РёРј Р»С–СЃС‚РѕРј)
             if (!isInited) {
                 newList->data = processingElement->data;
                 processingElement = processingElement->next;
-                isInited = true;  // позначення що ініціалізація відбулась
+                isInited = true;  // РїРѕР·РЅР°С‡РµРЅРЅСЏ С‰Рѕ С–РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ РІС–РґР±СѓР»Р°СЃСЊ
                 continue;
             }
             newList->push(processingElement->data);
