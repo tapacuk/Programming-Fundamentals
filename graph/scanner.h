@@ -1,4 +1,4 @@
-#ifndef SCANNER_H // потрібно щоб код працював один раз 
+#ifndef SCANNER_H
 #define SCANNER_H 
 
 #include <string>
