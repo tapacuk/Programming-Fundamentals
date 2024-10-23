@@ -2,19 +2,21 @@
 
 // перевірка на правильність рядка
 bool validateSubstring(const std::string& sub, std::string& errorMessage) {
-    if (sub.empty()) {
+    if (sub.empty()) { // перевіряємо, що підрядок не пустий
         errorMessage = "Підрядок пустий.";
         return false;
     }
 
-    if (sub[0] != '$') {
+    if (sub[0] != '$') { // перевіряємо, що перший символ підрядка це $
         errorMessage = "Підрядок має починатися із символу '$'.";
         return false;
     }
 
-    //size_t приберає проблеми з перебором індекса
+    // перевіряємо інші символи (починаючи з другого символа)
+    // size_t приберає проблеми з перебором індекса
     for (size_t i = 1; i < sub.size(); ++i) {
         char c = sub[i];
+        // чи символ не входить у діапазони '0..9' або 'A..F'
         if (!((c >= '0' && c <= '9') || (c >= 'A' && c <= 'F'))) {
             errorMessage = "Символ '" + std::string(1, c) + "' неприпустимий. "
                            "Дозволено тільки символи '0..9' та 'A..F'.";
@@ -26,7 +28,7 @@ bool validateSubstring(const std::string& sub, std::string& errorMessage) {
 }
 
 bool validateString(const std::string& s, std::string& errorMessage) {
-    // находимо в стрінгу символ :
+    // шукаємо в стрінгу символ :
     size_t colonPos = s.find(':');
     // якщо двокрапка не в рядку то. нпос це метод яка знаходить чи немає цього в рядку
     if (colonPos == std::string::npos) {
@@ -34,9 +36,11 @@ bool validateString(const std::string& s, std::string& errorMessage) {
         return false;
     }
 
-    std::string firstSub = s.substr(0, colonPos); // вилучаємо певний відрізок з стрінга, в цьому випадку до : включно
-    std::string secondSub = s.substr(colonPos + 1); // вилучаємо частину після :
+    // розбиваємо рядки на два підрядки для перевірки правильності кожного
+    std::string firstSub = s.substr(0, colonPos); // беремо певний відрізок з стрінга, в цьому випадку до : включно
+    std::string secondSub = s.substr(colonPos + 1); // беремо частину після :
 
+    // сама перевірка на помилки в рядках
     if (!validateSubstring(firstSub, errorMessage)) {
         errorMessage = " Помилка в першому підрядку: " + errorMessage;
         return false;
